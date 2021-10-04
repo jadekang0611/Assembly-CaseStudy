@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 import './Collection.scss';
 import axios from 'axios';
 import ImageCard from '../../components/Card/ImageCard';
-import Grid from '@mui/material/Grid';
 import { api } from '../../constants/api';
 import SearchBar from '../../components/SearchBar';
 import Loading from '../Loading';
+import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/path';
 
 const Collection = () => {
   const [redditData, setRedditData] = useState(null);
@@ -36,29 +37,32 @@ const Collection = () => {
   return (
     <div className="collection-layout-container">
       <SearchBar onChange={changeHandler} />
-      <Grid container spacing={1} className="collection-grid-container">
-        <Grid
-          container
-          item
-          rowSpacing={2}
-          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-          justifyContent="center"
-          alignItems="center"
-        >
-          {filteredData &&
-            filteredData.map((item, i) => {
-              return (
-                <ImageCard
-                  key={i.toString()}
-                  img={item.data.thumbnail}
-                  alt={item.data.title}
-                  title={item.data.title}
-                  height={item.data.thumbnail_height}
-                />
-              );
-            })}
-        </Grid>
-      </Grid>
+      <div className="collection-grid-container">
+        {filteredData &&
+          filteredData.map((item, i) => {
+            return (
+              <>
+                <Link
+                  to={{
+                    pathname: ROUTES.CARD + `/${item.data.author}`,
+                    title: item.data.title,
+                    // img: item.data.url_overridden_by_dest,
+                    // author: item.data.author_fullname,
+                    // ups: item.data.ups,
+                  }}
+                >
+                  <ImageCard
+                    key={i.toString()}
+                    img={item.data.thumbnail}
+                    alt={item.data.title}
+                    title={item.data.title}
+                    height={item.data.thumbnail_height}
+                  />
+                </Link>
+              </>
+            );
+          })}
+      </div>
     </div>
   );
 };

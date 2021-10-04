@@ -9,19 +9,18 @@ function App() {
     <>
       <Layout />
       <Router>
-        <Switch>
-          <Route
-            exact
-            path={ROUTES.COLLECTION}
-            component={() => <Collection />}
-          />
-          <Route
-            path={ROUTES.CARD}
-            render={(props) => {
-              <DetailPage {...props} />;
-            }}
-          />
-        </Switch>
+        <Route
+          exact
+          path={ROUTES.COLLECTION}
+          component={() => <Collection />}
+        />
+        <Route
+          path={ROUTES.CARD}
+          render={(props) => {
+            console.log(props);
+            <DetailPage {...props} />;
+          }}
+        />
       </Router>
     </>
   );

@@ -1,2 +1,2 @@
 export const COLLECTION = '/';
-export const CARD = '/card/:id';
+export const CARD = '/card';

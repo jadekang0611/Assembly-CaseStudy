@@ -1,17 +1,12 @@
-import { makeStyles, Typography } from '@mui/material';
-
+import './Layout.scss';
 const staticData = {
-  title: 'Assembly Case Study',
-  position: 'Frontend Engineer',
+  title: 'Photos from Reddit',
 };
-
-
 
 const Layout = () => {
   return (
     <div className="default-layout-container">
       <h1>{staticData.title}</h1>
-      <h2>{staticData.position}</h2>
     </div>
   );
 };

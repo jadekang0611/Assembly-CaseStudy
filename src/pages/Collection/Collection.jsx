@@ -5,6 +5,7 @@ import ImageCard from '../../components/Card/ImageCard';
 import Grid from '@mui/material/Grid';
 import { api } from '../../constants/api';
 import SearchBar from '../../components/SearchBar';
+import Loading from '../Loading';
 
 const Collection = () => {
   const [redditData, setRedditData] = useState(null);
@@ -30,15 +31,7 @@ const Collection = () => {
   }, [search, redditData]);
 
   if (!redditData) {
-    return (
-      <div className="loading-wrapper">
-        <img
-          src="https://www.redditinc.com/assets/images/site/reddit-logo.png"
-          alt="reddit logo"
-        />
-        <h2>Loading...</h2>
-      </div>
-    );
+    return <Loading />;
   }
   return (
     <div className="collection-layout-container">

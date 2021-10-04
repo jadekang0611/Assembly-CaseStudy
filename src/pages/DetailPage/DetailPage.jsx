@@ -1,13 +1,17 @@
 import './DetailPage.scss';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import * as ROUTES from '../../constants/path';
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import Button from '@mui/material/Button';
 
-const DetailPage = (props) => {
-  //   console.log(props.location);
-  //   document.title = `Reddit Photo | ${props.location.title}`;
+const DetailPage = () => {
+  const location = useLocation();
+  const title = location.state?.title;
+  const author = location.state?.author;
+  const img = location.state?.img;
+
+  document.title = `Reddit Photo | ${title}`;
   return (
     <div className="detail-page-container">
       <div>
@@ -16,10 +20,10 @@ const DetailPage = (props) => {
           Back to Collection
         </Link>
       </div>
-      <h2>Title:</h2>
-      <h4>Author: </h4>
+      <h2>Title: {title}</h2>
+      <h4>Author: {author}</h4>
       <div className="img-content-wrapper">
-        <img src="" alt="" />
+        <img src={img} alt={title} />
       </div>
     </div>
   );

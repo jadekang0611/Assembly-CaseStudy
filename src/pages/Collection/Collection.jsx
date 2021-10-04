@@ -14,7 +14,6 @@ const Collection = () => {
   const [filteredData, setFilteredData] = useState([]);
 
   function changeHandler(e) {
-    console.log(e.target.value);
     setSearch(e.target.value);
   }
 
@@ -45,10 +44,12 @@ const Collection = () => {
                 <Link
                   to={{
                     pathname: ROUTES.CARD + `/${item.data.author}`,
-                    title: item.data.title,
-                    // img: item.data.url_overridden_by_dest,
-                    // author: item.data.author_fullname,
-                    // ups: item.data.ups,
+                    state: {
+                      title: item.data.title,
+                      img: item.data.url_overridden_by_dest,
+                      author: item.data.author_fullname,
+                      ups: item.data.ups,
+                    },
                   }}
                 >
                   <ImageCard

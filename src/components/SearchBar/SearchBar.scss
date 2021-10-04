@@ -1,0 +1,13 @@
+.searchBar-container {
+  input[type='text'] {
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 3px;
+    border: 2px solid #919191;
+    &:focus {
+      border: 2px solid #fc4400;
+      outline: none;
+    }
+  }
+}

@@ -4,7 +4,7 @@ import { Card, CardMedia, CardContent, Typography } from '@mui/material';
 const ImageCard = (props) => {
   return (
     <Card
-      sx={{ maxWidth: 180 }}
+      sx={{ maxWidth: 250, maxHeight: 250 }}
       data-testid="image-card"
       className="image-card"
     >

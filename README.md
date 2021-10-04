@@ -1,3 +1,50 @@
+# What is Reddit Photo Case Study
+
+As a frontend engineer candidate at Assembly, I was asked to
+build a single page application that fetches photos from http://www.reddit.com/r/pics/.json?jsonp=.
+
+## Application URL
+
+[Live Page](/)
+
+## Authorization
+
+This is a public application and no authorization is required
+to access it.
+
+## Common setup
+
+Clone the repo (or extract the provided project folder) and install dependencies.
+
+```bash
+git clone https://github.com/jadekang0611/Assembly-CaseStudy
+
+npm install
+```
+
+## Technologies
+
+- ReactJS
+- Material-UI
+- Axios
+- AWS
+
+## What's Included
+
+- Collection Landing Page
+- Detailed Page
+
+## What I Could Have Done Better
+
+- If I had some more time I could have built more stable custom theme for the overall UI
+- I could have built and implemented the restricted access only for the assembly employees.
+
+## Deploy to AWS S3
+
+You can deploy this app to AWS S3 following the steps provided below. If you aren't yet a collaborator, you can request an invitation by sending an email to jkang.se@gmail.com
+
+[![Deploy]](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Categories=categories%23storage&trk=ps_a134p000006gGiNAAU&trkCampaign=acq_paid_search_brand&sc_channel=PS&sc_campaign=acquisition_KR&sc_publisher=Google&sc_category=Storage&sc_country=KR&sc_geo=APAC&sc_outcome=acq&sc_detail=%2Bs3&sc_content=S3_bmm&sc_matchtype=b&sc_segment=489215169064&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Storage|S3|KR|EN|Text&s_kwcid=AL!4422!3!489215169064!b!!g!!%2Bs3&ef_id=CjwKCAjwzOqKBhAWEiwArQGwaBgcNUYpo19SpNBcZ2enUqpYXiYCRHDloD8pNg8eyAghopc-dvJ3ERoCJ6MQAvD_BwE:G:s&s_kwcid=AL!4422!3!489215169064!b!!g!!%2Bs3&awsf.Free%20Tier%20Types=*all)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

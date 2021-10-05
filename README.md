@@ -5,7 +5,7 @@ build a single page application that fetches photos from http://www.reddit.com/r
 
 ## Application URL
 
-[Live Page](/)
+[Live Page](https://still-garden-00283.herokuapp.com/)
 
 ## Authorization
 

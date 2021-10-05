@@ -28,6 +28,7 @@ npm install
 - Material-UI
 - Axios
 - Heroku
+- Postman
 
 ## What's Included
 
@@ -38,6 +39,7 @@ npm install
 
 - If I had some more time I could have built more stable custom theme for the overall UI
 - I could have built and implemented the restricted access only for the assembly team.
+- If I had more time I could have implemented more thorough unit testing.
 
 # Getting Started with Create React App
 
